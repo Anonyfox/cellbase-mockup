@@ -54,7 +54,7 @@
 
 
 
-.navbar .brand { color: #00B060;   text-shadow: 0 1px 0 #aaaaaa; }
+.navbar .brand { color: #00B060;   text-shadow: 0 1px 0 #000000; }
 .navbar .brand:hover,
 .navbar .brand:focus { color: #C5FFE5; }
 
