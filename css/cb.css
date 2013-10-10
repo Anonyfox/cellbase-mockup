@@ -4,6 +4,13 @@
  * 
  */
 
+.bgwp { 
+	background-image: url(../img/bacteriawatersign.png); 
+	background-size: 5%;
+	border: none;
+	background-position: center;
+}
+
 .ontop {
 	position:fixed;
     top:0; left:0; right:0;
