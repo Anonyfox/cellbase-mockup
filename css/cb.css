@@ -52,12 +52,7 @@
 .col-highlight-dark { color: #932800; }
 .col-highlight-light { color: #FFA98A; }
 
-.bg-gradient-white-bottom {
-	background-image: -webkit-linear-gradient(transparent 0%, #ffffff 150%); 
-	background-image: -moz-linear-gradient(transparent 0%, #ffffff 150%); 
-	background-image: -o-linear-gradient(transparent 0%, #ffffff 150%); 
-	background-image: linear-gradient(transparent 0%, #ffffff 150%);
-}
+
 
 .navbar .brand { color: #00B060;   text-shadow: 0 1px 0 #000000; }
 .navbar .brand:hover,
@@ -102,20 +97,6 @@ a {
     text-decoration: none;
     color: #43DF98;
   }
-
-.pumpupthejam { margin-top: -2px; }
-.takemehigher { margin-top: -17px; }
-.sumo { width: 99.9%; }
-.tighter { margin-bottom: -10px; padding-bottom: -10px; }
-
-
-
-.center-it {
-	margin-left: 50%;
-	margin-right: 50%;
-	padding-left: 50%;
-	padding-right: 50%;
-}
 
 .nav-drop-rand {
 	padding-top: 10px; 
@@ -183,18 +164,6 @@ a {
 	padding: 7px 9px;
 }
 
-.label-plague,
-.badge-blague {
-  background-color: #468847;
-}
-
-.label-plague[href],
-.badge-plague[href] {
-  background-color: #356635;
-}
-
-.btn-text-small { font-size: x-small; }
-
 .btn-plague{
 	color: #ffffff;
 	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
@@ -224,6 +193,7 @@ a {
 .btn-plague:hover,
 .btn-plague:focus,
 .btn-plague:active,
+.btn-plague.active,
 .btn-plague.disabled,
 .btn-plague[disabled] {
   	color: #ffffff;
@@ -243,50 +213,4 @@ a {
   	color: #ffffff;
   	background-color: #00B060;
   	*background-color: #499249;
-}
-
-.btn-plague.active,
-.btn-cancel.active, {
-  color: rgba(255, 255, 255, 0.75);
-}
-
-.btn-cancel {
-  color: #ffffff;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  font-size: x-small;
-  background-color: #da4f49;
-  *background-color: #bd362f;
-  background-image: -moz-linear-gradient(top, #ee5f5b, #bd362f);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ee5f5b), to(#bd362f));
-  background-image: -webkit-linear-gradient(top, #ee5f5b, #bd362f);
-  background-image: -o-linear-gradient(top, #ee5f5b, #bd362f);
-  background-image: linear-gradient(to bottom, #ee5f5b, #bd362f);
-  background-repeat: repeat-x;
-  border-color: #bd362f #bd362f #802420;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffee5f5b', endColorstr='#ffbd362f', GradientType=0);
-  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
-}
-
-.btn-cancel:hover,
-.btn-cancel:focus,
-.btn-cancel:active,
-.btn-cancel.active,
-.btn-cancel.disabled,
-.btn-cancel[disabled] {
-  color: #ffffff;
-  background-color: #bd362f;
-  *background-color: #a9302a;
-}
-
-.btn-cancel:active,
-.btn-cancel.active {
-  background-color: #942a25 \9;
-}
-.btn-cancel a,
-.btn-cancel a:hover,
-.btn-cancel a:visited {
-	color: #ffffff;
-	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-	background-color: transparent;
 }
