@@ -10,6 +10,11 @@
 	border: none;
 }
 
+.marge {
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
 .ontop {
 	position:fixed;
     top:0; left:0; right:0;
