@@ -64,6 +64,14 @@
 	background-image: linear-gradient(transparent 0%, #ffffff 150%);
 }
 
+.rad_grad {
+background:-moz-radial-gradient(center, #fff 100%, #23332C 0%);
+background:-webkit-radial-gradient(center, #fff 100%, #23332C 0%);
+background:-o-radial-gradient(center, #fff 100%, #23332C 0%);
+background:-ms-radial-gradient(center, #fff 100%, #23332C 0%);
+background:radial-gradient(center, #fff 100%, #23332C 0%);
+}
+
 .dropmenu-marge { 
 	margin-top: -5px;
 	margin-bottom: -5px;
@@ -120,7 +128,10 @@ a {
 .sumo { width: 99.9%; }
 .tighter { padding-bottom: -10px; }
 
-
+[class*="span"].pull-center,
+.row-fluid [class*="span"].pull-center {
+  float: center;
+}
 
 .center-it {
 	margin-left: 50%;
@@ -260,6 +271,15 @@ a {
 .btn-plague.active,
 .btn-cancel.active, {
   color: rgba(255, 255, 255, 0.75);
+}
+
+.glasify {
+	-khtml-opacity: 0.6
+	-moz-opacity: 0.6
+	-webkit-opacity: 0.6
+	filter: alpha(opacity=60)
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+	opacity: 0.6;
 }
 
 .btn-cancel {
