@@ -64,6 +64,13 @@
 	background-image: linear-gradient(transparent 0%, #ffffff 150%);
 }
 
+.dropmenu-marge { 
+	margin-top: -5px;
+	margin-bottom: -5px;
+	padding-top: -5px;
+	padding-bottom: -5px;
+}
+
 .navbar .brand { color: #00B060;   text-shadow: 0 1px 0 #000000; }
 .navbar .brand:hover,
 .navbar .brand:focus { color: #C5FFE5; }
@@ -109,9 +116,9 @@ a {
   }
 
 .pumpupthejam { margin-top: -2px; }
-.takemehigher { margin-top: -17px; }
+.takemehigher { margin-top: -10px; }
 .sumo { width: 99.9%; }
-.tighter { margin-bottom: -10px; padding-bottom: -10px; }
+.tighter { padding-bottom: -10px; }
 
 
 
