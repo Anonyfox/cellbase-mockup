@@ -57,11 +57,11 @@
 .col-highlight-dark { color: #932800; }
 .col-highlight-light { color: #FFA98A; }
 
-.bg-gradient-white-bottom {
-	background-image: -webkit-linear-gradient(transparent 0%, #ffffff 150%); 
-	background-image: -moz-linear-gradient(transparent 0%, #ffffff 150%); 
-	background-image: -o-linear-gradient(transparent 0%, #ffffff 150%); 
-	background-image: linear-gradient(transparent 0%, #ffffff 150%);
+.bg-50w {
+	background-image: -webkit-linear-gradient(#ffffff 50%, #ffffff 50%); 
+	background-image: -moz-linear-gradient(#ffffff 50%, #ffffff 50%); 
+	background-image: -o-linear-gradient(#ffffff 50%, #ffffff 50%); 
+	background-image: linear-gradient(#ffffff 50%, #ffffff 50%);
 }
 
 .rad_grad {
@@ -71,6 +71,10 @@ background:-o-radial-gradient(center, transparent -50%, #000 110%);
 background:-ms-radial-gradient(center, transparent -50%, #000 110%);
 background:radial-gradient(center, transparent -50%, #000 110%);
 }
+
+
+.txt-x-small { font-size: x-small; }
+.txt-small { font-size: small; }
 
 h0 {
   line-height: 60px;
