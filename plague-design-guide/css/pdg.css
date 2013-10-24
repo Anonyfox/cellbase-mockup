@@ -141,3 +141,9 @@
 .color-table .white { margin-bottom:0.2em; color:white }
 .color-table .black { margin-top:0.2em; color:black }
 
+.nav-pills > .active > a { background-color: #006537; }
+.nav-pills > .active > a:hover,
+.nav-pills > .active > a:focus {
+  	color: #ffffff;
+  	background-color: #00B060; 
+  }
