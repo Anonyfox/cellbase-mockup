@@ -10,6 +10,12 @@
 	border: none;
 }
 
+.bglanding {
+	background-image: url(../img/c2.png); 
+	background-size: 100%;
+	border: none;
+}
+
 .marge {
 	margin-left: 10%;
 	margin-right: 10%;
