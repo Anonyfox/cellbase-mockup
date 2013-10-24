@@ -24,9 +24,31 @@
 .col-highlight-dark { color: #932800; }
 .col-highlight-light { color: #FFA98A; }
 
-.rand {
-	padding 1em;
-	border 1px;
+.plague-example {
+position: relative;
+margin: 15px 0;
+padding: 45px 25px 20px;
+background-color: #C5FFE5;
+border: 1px solid #23332C;
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+border-radius: 4px;
+}
+
+.plague-example:after {
+content: "Beispiel";
+position: absolute;
+top: -1px;
+left: -1px;
+padding: 1px 7px;
+font-size: 0.5em;
+font-weight: bold;
+background-color: #006537;
+border: 1px solid #23332C;
+color: #C5FFE5;
+-webkit-border-radius: 4px 0 4px 0;
+-moz-border-radius: 4px 0 4px 0;
+border-radius: 4px 0 4px 0;
 }
 
 .txt-x-small { font-size: x-small; }
