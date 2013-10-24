@@ -130,7 +130,7 @@
 	text-align:center;
 	vertical-align:middle;
 	font-size:90%;
-	border: 1px solid white;
+	border: none;
 	white-space:nowrap;
 	}
 .color-table.small td.sample {
