@@ -300,12 +300,12 @@ a {
 }
 
 .glasify {
-	-khtml-opacity: 0.6
-	-moz-opacity: 0.6
-	-webkit-opacity: 0.6
-	filter: alpha(opacity=60)
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
-	opacity: 0.6;
+	-khtml-opacity: 0.8
+	-moz-opacity: 0.8
+	-webkit-opacity: 0.8
+	filter: alpha(opacity=80)
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+	opacity: 0.8;
 }
 
 .btn-cancel {
