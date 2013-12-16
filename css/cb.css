@@ -81,6 +81,7 @@ background:radial-gradient(center, transparent -50%, #000 110%);
 
 .txt-x-small { font-size: x-small; }
 .txt-small { font-size: small; }
+.txt { font-size: normal; }
 
 h0 {
   line-height: 60px;
@@ -263,7 +264,6 @@ a {
 .btn-plague{
 	color: #ffffff;
 	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-	font-size: x-small;
 	background-color: #363636;
 	*background-color: #006537;
   	background-image: -moz-linear-gradient(top, #006537, #222222);
