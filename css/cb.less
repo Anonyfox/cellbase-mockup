@@ -1,8 +1,29 @@
 /* 
  * 
- * CSS by okukun
+ * LESS by okukun
  * 
  */
+
+/*Vars*/
+/*Standard colors*/
+@bck: #000000; /*black*/
+@wht: #ffffff; /*white*/
+@gry: #23332C; /*grey plague*/
+@gra: #777777; /*grey*/
+@lig: #C5FFE5; /*light plague*/
+@def: #00B060; /*default plague*/
+@hev: #257B54; /*heavy plague*/
+@drk: #006537; /*dark plague*/
+@hli: #FF4500; /*highlight plague*/
+@hld: #932800; /*highlight dark plague*/
+@hll: #FFA98A; /*highlight light plague*/
+@lnk: #43DF98; /*link*/
+@bdg: #468847; /*badge plague*/
+@bdh: #356635; /*badge plague highlight*/
+/*for use with rgb(a) col*/
+@rbck: 0, 0, 0; /*black*/
+@rwht: 255, 255, 255; /*white*/
+
 
 .bgwp { 
 	background-image: url(../img/bacteriawatersign.png); 
@@ -42,40 +63,40 @@
 .img-float-right { float:right;}
 .img-float-none { float: none;}
 
-.bg-black { background-color: #000000; }
-.bg-white { background-color: #ffffff; }
-.bg-light { background-color: #C5FFE5; }
-.bg-grey { background-color: #23332C; }
-.bg-def { background-color: #00B060; }
-.bg-heavy { background-color: #257B54; }
-.bg-dark { background-color: #006537; }
-.bg-highlight { background-color: #FF4500; }
-.bg-highlight-dark { background-color: #932800; }
-.bg-highlight-light { background-color: #FFA98A; }
+.bg-black { background-color: @bck; }
+.bg-white { background-color: @wht; }
+.bg-light { background-color: @lig; }
+.bg-grey { background-color: @gry; }
+.bg-def { background-color: @def; }
+.bg-heavy { background-color: @hev; }
+.bg-dark { background-color: @drk; }
+.bg-highlight { background-color: @hli; }
+.bg-highlight-dark { background-color: @hld; }
+.bg-highlight-light { background-color: @hll; }
 
-.col-white { color: #ffffff; }
-.col-light { color: #C5FFE5; }
-.col-grey { color: #23332C; }
-.col-def { color: #00B060; }
-.col-heavy { color: #257B54; }
-.col-dark { color: #006537; }
-.col-highlight { color: #FF4500; }
-.col-highlight-dark { color: #932800; }
-.col-highlight-light { color: #FFA98A; }
+.col-white { color: @wht; }
+.col-light { color: @lig; }
+.col-grey { color: @gry; }
+.col-def { color: @def; }
+.col-heavy { color: @hev; }
+.col-dark { color: @drk; }
+.col-highlight { color: @hli; }
+.col-highlight-dark { color: @hld; }
+.col-highlight-light { color: @hll; }
 
 .bg-50w {
-	background-image: -webkit-linear-gradient(#ffffff 50%, #ffffff 50%); 
-	background-image: -moz-linear-gradient(#ffffff 50%, #ffffff 50%); 
-	background-image: -o-linear-gradient(#ffffff 50%, #ffffff 50%); 
-	background-image: linear-gradient(#ffffff 50%, #ffffff 50%);
+	background-image: -webkit-linear-gradient(@wht 50%, @wht 50%); 
+	background-image: -moz-linear-gradient(@wht 50%, @wht 50%); 
+	background-image: -o-linear-gradient(@wht 50%, @wht 50%); 
+	background-image: linear-gradient(@wht 50%, @wht 50%);
 }
 
 .rad_grad {
-background:-moz-radial-gradient(center, transparent -50%, #000 110%);
-background:-webkit-radial-gradient(center, transparent -50%, #000 110%);
-background:-o-radial-gradient(center, transparent -50%, #000 110%);
-background:-ms-radial-gradient(center, transparent -50%, #000 110%);
-background:radial-gradient(center, transparent -50%, #000 110%);
+background:-moz-radial-gradient(center, transparent -50%, @bck 110%);
+background:-webkit-radial-gradient(center, transparent -50%, @bck 110%);
+background:-o-radial-gradient(center, transparent -50%, @bck 110%);
+background:-ms-radial-gradient(center, transparent -50%, @bck 110%);
+background:radial-gradient(center, transparent -50%, @bck 110%);
 }
 
 
@@ -92,23 +113,23 @@ h0 {
 }
 
 .text-shadow-black {
-	text-shadow: 1px 5px 1px #000000;
+	text-shadow: 1px 5px 1px @bck;
 }
 
 .text-shadow-w {
-	text-shadow: 0px 1px 1px #aaa;
+	text-shadow: 0px 1px 1px @wht;
 }
 
 .box-glow {
 	margin: 0px;
 	/* default fallback */
-	background: rgb(255, 255, 255) transparent;
+	background: rgb(@rwht) transparent;
 	/* nice browsers */
-	background: rgba(255, 255, 255, 0.5);
+	background: rgba(@rwht, 0.5);
 
-	-moz-box-shadow: 0px 0px 100px rgba(255,255,255,0.8);
-	-webkit-box-shadow: 0px 0px 100px rgba(255,255,255,0.8);
-	box-shadow: 0px 0px 100px rgba(255,255,255,0.8);
+	-moz-box-shadow: 0px 0px 100px rgba(@rwht,0.8);
+	-webkit-box-shadow: 0px 0px 100px rgba(@rwht,0.8);
+	box-shadow: 0px 0px 100px rgba(@rwht,0.8);
 
 	filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.30);
 	-ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.30)";
@@ -122,9 +143,9 @@ h0 {
 	padding-bottom: -5px;
 }
 
-.navbar .brand { color: #00B060;   text-shadow: 0 1px 0 #000000; }
+.navbar .brand { color: @def;   text-shadow: 0 1px 0 @bck; }
 .navbar .brand:hover,
-.navbar .brand:focus { color: #C5FFE5; }
+.navbar .brand:focus { color: @lig; }
 
 .navbar .ticker {
   display: block;
@@ -133,7 +154,7 @@ h0 {
   margin-left: -20px;
   font-size: 15px;
   font-weight: 200;
-  color: #777777;
+  color: @gra;
   text-shadow: none;
 }
 
@@ -144,7 +165,7 @@ h0 {
   margin-left: -20px;
   font-size: 10px;
   font-weight: 200;
-  color: #ffffff;
+  color: @wht;
   text-shadow: none;
 }
 
@@ -157,13 +178,13 @@ h0 {
 
 a {
     text-decoration: none;
-    color: #00B060;
+    color: @def;
   }
 
  a:visited,
   a:hover {
     text-decoration: none;
-    color: #43DF98;
+    color: @lnk;
   }
 
 .pumpupthejam { margin-top: -2px; }
@@ -216,9 +237,9 @@ a {
 	-webkit-border-radius: 5px;
 	   -moz-border-radius: 5px;
 	        border-radius: 5px;
-	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
-	   -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
-	        box-shadow: 0 1px 2px rgba(0,0,0,.05);
+	-webkit-box-shadow: 0 1px 2px rgba(@rbck,.05);
+	   -moz-box-shadow: 0 1px 2px rgba(@rbck,.05);
+	        box-shadow: 0 1px 2px rgba(@rbck,.05);
 }
 .nt-right{ width: 92%; }
 
@@ -250,30 +271,30 @@ a {
 }
 
 .label-plague,
-.badge-blague {
-  background-color: #468847;
+.badge-plague {
+  background-color: @bdg;
 }
 
 .label-plague[href],
 .badge-plague[href] {
-  background-color: #356635;
+  background-color: @bdh;
 }
 
 .btn-text-small { font-size: x-small; }
 
-.btn-plague{
+.btn-plague (@typ: top; @farbe: @drk; @grad: #222) {
 	color: #ffffff;
-	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+	text-shadow: 0 -1px 0 rgba(@rbck, 0.25);
 	background-color: #363636;
-	*background-color: #006537;
-  	background-image: -moz-linear-gradient(top, #006537, #222222);
-  	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#006537), to(#222222));
-  	background-image: -webkit-linear-gradient(top, #006537, #222222);
-  	background-image: -o-linear-gradient(top, #006537, #222222);
-  	background-image: linear-gradient(to bottom, #006537, #222222);
+	*background-color: @farbe;
+  	background-image: -moz-linear-gradient(@typ, @farbe, @grad);
+  	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@farbe), to(@grad));
+  	background-image: -webkit-linear-gradient(@typ, @farbe, @grad);
+  	background-image: -o-linear-gradient(@typ, @farbe, @grad);
+  	background-image: linear-gradient(to bottom, @farbe, @grad);
   	background-repeat: repeat-x;
-  	border-color: #222222 #222222 #000000;
-  	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  	border-color: @grad @grad @bck;
+  	border-color: rgba(@rbck, 0.1) rgba(@rbck, 0.1) rgba(@rbck, 0.25);
   	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff444444', endColorstr='#ff222222', GradientType=0);
   	filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
 }
@@ -281,8 +302,8 @@ a {
 .btn-plague a,
 .btn-plague a:hover,
 .btn-plague a:visited {
-	color: #ffffff;
-	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+	color: @wht;
+	text-shadow: 0 -1px 0 rgba(@rbck, 0.25);
 	background-color: transparent;
 }
 
@@ -291,18 +312,18 @@ a {
 .btn-plague:active,
 .btn-plague.disabled,
 .btn-plague[disabled] {
-  	color: #ffffff;
- 	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-	background-color: #00B060;
+  	color: @wht;
+ 	text-shadow: 0 -1px 0 rgba(@rbck, 0.25);
+	background-color: @def;
  	*background-color: #5bb75b; /*51a351*/
-	background-image: -moz-linear-gradient(top, #62c462, #00B060);
-	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#62c462), to(#00B060));
-	background-image: -webkit-linear-gradient(top, #62c462, #00B060);
-	background-image: -o-linear-gradient(top, #62c462, #00B060);
- 	background-image: linear-gradient(to bottom, #62c462, #00B060);
+	background-image: -moz-linear-gradient(top, #62c462, @def);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#62c462), to(@def));
+	background-image: -webkit-linear-gradient(top, #62c462, @def);
+	background-image: -o-linear-gradient(top, #62c462, @def);
+ 	background-image: linear-gradient(to bottom, #62c462, @def);
 	background-repeat: repeat-x;
- 	border-color: #00B060 #00B060 #387038;
- 	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+ 	border-color: @def @def #387038;
+ 	border-color: rgba(@rbck, 0.1) rgba(@rbck, 0.1) rgba(@rbck, 0.25);
  	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff62c462', endColorstr='#ff51a351', GradientType=0);
  	filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
   	color: #ffffff;
@@ -325,8 +346,8 @@ a {
 }
 
 .btn-cancel {
-  color: #ffffff;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  color: @wht;
+  text-shadow: 0 -1px 0 rgba(@rbck, 0.25);
   font-size: x-small;
   background-color: #da4f49;
   *background-color: #bd362f;
@@ -337,7 +358,7 @@ a {
   background-image: linear-gradient(to bottom, #ee5f5b, #bd362f);
   background-repeat: repeat-x;
   border-color: #bd362f #bd362f #802420;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  border-color: rgba(@rbck, 0.1) rgba(@rbck, 0.1) rgba(@rbck, 0.25);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffee5f5b', endColorstr='#ffbd362f', GradientType=0);
   filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
 }
@@ -348,7 +369,7 @@ a {
 .btn-cancel.active,
 .btn-cancel.disabled,
 .btn-cancel[disabled] {
-  color: #ffffff;
+  color: @wht;
   background-color: #bd362f;
   *background-color: #a9302a;
 }
@@ -360,7 +381,7 @@ a {
 .btn-cancel a,
 .btn-cancel a:hover,
 .btn-cancel a:visited {
-	color: #ffffff;
-	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+	color: @wht;
+	text-shadow: 0 -1px 0 rgba(@rbck, 0.25);
 	background-color: transparent;
 }
