@@ -2,8 +2,9 @@
  * 
  * LESS by okukun
  * 
- */
-
+ *//*
+Import Prefixer*/
+@import "prefixer.less";
 /*Vars*/
 /*Standard colors*/
 @bck: #000000; /*black*/
@@ -21,8 +22,8 @@
 @bdg: #468847; /*badge plague*/
 @bdh: #356635; /*badge plague highlight*/
 /*for use with rgb(a) col*/
-@rbck: 0, 0, 0; /*black*/
-@rwht: 255, 255, 255; /*white*/
+@bl: 0; /*black*/
+@wh: 255; /*white*/
 
 
 .bgwp { 
@@ -123,13 +124,13 @@ h0 {
 .box-glow {
 	margin: 0px;
 	/* default fallback */
-	background: rgb(@rwht) transparent;
+	background: rgb(@wh, @wh, @wh, transparent);
 	/* nice browsers */
-	background: rgba(@rwht, 0.5);
+	background: rgba(@wh, @wh, @wh, 0.5);
 
-	-moz-box-shadow: 0px 0px 100px rgba(@rwht,0.8);
-	-webkit-box-shadow: 0px 0px 100px rgba(@rwht,0.8);
-	box-shadow: 0px 0px 100px rgba(@rwht,0.8);
+	-moz-box-shadow: 0px 0px 100px rgba(@wh, @wh, @wh,0.8);
+	-webkit-box-shadow: 0px 0px 100px rgba(@wh, @wh, @wh,0.8);
+	box-shadow: 0px 0px 100px rgba(@wh, @wh, @wh,0.8);
 
 	filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.30);
 	-ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.30)";
@@ -237,9 +238,9 @@ a {
 	-webkit-border-radius: 5px;
 	   -moz-border-radius: 5px;
 	        border-radius: 5px;
-	-webkit-box-shadow: 0 1px 2px rgba(@rbck,.05);
-	   -moz-box-shadow: 0 1px 2px rgba(@rbck,.05);
-	        box-shadow: 0 1px 2px rgba(@rbck,.05);
+	-webkit-box-shadow: 0 1px 2px rgba(@bl, @bl, @bl,.05);
+	   -moz-box-shadow: 0 1px 2px rgba(@bl, @bl, @bl,.05);
+	        box-shadow: 0 1px 2px rgba(@bl, @bl, @bl,.05);
 }
 .nt-right{ width: 92%; }
 
@@ -282,19 +283,19 @@ a {
 
 .btn-text-small { font-size: x-small; }
 
-.btn-plague (@typ: top; @farbe: @drk; @grad: #222) {
+.btn-plague {
 	color: #ffffff;
-	text-shadow: 0 -1px 0 rgba(@rbck, 0.25);
+	text-shadow: 0 -1px 0 rgba(@bl, @bl, @bl, 0.25);
 	background-color: #363636;
-	*background-color: @farbe;
-  	background-image: -moz-linear-gradient(@typ, @farbe, @grad);
-  	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@farbe), to(@grad));
-  	background-image: -webkit-linear-gradient(@typ, @farbe, @grad);
-  	background-image: -o-linear-gradient(@typ, @farbe, @grad);
-  	background-image: linear-gradient(to bottom, @farbe, @grad);
+	*background-color: @drk;
+  	background-image: -moz-linear-gradient(top, @drk, #222);
+  	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@drk), to(#222));
+  	background-image: -webkit-linear-gradient(top, @drk, #222);
+  	background-image: -o-linear-gradient(top, @drk, #222);
+  	background-image: linear-gradient(to bottom, @drk, #222);
   	background-repeat: repeat-x;
-  	border-color: @grad @grad @bck;
-  	border-color: rgba(@rbck, 0.1) rgba(@rbck, 0.1) rgba(@rbck, 0.25);
+  	border-color: #222 #222 @bck;
+  	border-color: rgba(@bl, @bl, @bl, 0.1) rgba(@bl, @bl, @bl, 0.1) rgba(@bl, @bl, @bl, 0.25);
   	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff444444', endColorstr='#ff222222', GradientType=0);
   	filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
 }
@@ -303,7 +304,7 @@ a {
 .btn-plague a:hover,
 .btn-plague a:visited {
 	color: @wht;
-	text-shadow: 0 -1px 0 rgba(@rbck, 0.25);
+	text-shadow: 0 -1px 0 rgba(@bl, @bl, @bl, 0.25);
 	background-color: transparent;
 }
 
@@ -313,7 +314,7 @@ a {
 .btn-plague.disabled,
 .btn-plague[disabled] {
   	color: @wht;
- 	text-shadow: 0 -1px 0 rgba(@rbck, 0.25);
+ 	text-shadow: 0 -1px 0 rgba(@bl, @bl, @bl, 0.25);
 	background-color: @def;
  	*background-color: #5bb75b; /*51a351*/
 	background-image: -moz-linear-gradient(top, #62c462, @def);
@@ -323,7 +324,7 @@ a {
  	background-image: linear-gradient(to bottom, #62c462, @def);
 	background-repeat: repeat-x;
  	border-color: @def @def #387038;
- 	border-color: rgba(@rbck, 0.1) rgba(@rbck, 0.1) rgba(@rbck, 0.25);
+ 	border-color: rgba(@bl, @bl, @bl, 0.1) rgba(@bl, @bl, @bl, 0.1) rgba(@bl, @bl, @bl, 0.25);
  	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff62c462', endColorstr='#ff51a351', GradientType=0);
  	filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
   	color: #ffffff;
@@ -333,21 +334,12 @@ a {
 
 .btn-plague.active,
 .btn-cancel.active, {
-  color: rgba(255, 255, 255, 0.75);
-}
-
-.glasify {
-	-khtml-opacity: 0.8
-	-moz-opacity: 0.8
-	-webkit-opacity: 0.8
-	filter: alpha(opacity=80)
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
-	opacity: 0.8;
+  color: rgba(@wh, @wh, @wh, 0.75);
 }
 
 .btn-cancel {
   color: @wht;
-  text-shadow: 0 -1px 0 rgba(@rbck, 0.25);
+  text-shadow: 0 -1px 0 rgba(@bl, @bl, @bl, 0.25);
   font-size: x-small;
   background-color: #da4f49;
   *background-color: #bd362f;
@@ -358,7 +350,7 @@ a {
   background-image: linear-gradient(to bottom, #ee5f5b, #bd362f);
   background-repeat: repeat-x;
   border-color: #bd362f #bd362f #802420;
-  border-color: rgba(@rbck, 0.1) rgba(@rbck, 0.1) rgba(@rbck, 0.25);
+  border-color: rgba(@bl, @bl, @bl, 0.1) rgba(@bl, @bl, @bl, 0.1) rgba(@bl, @bl, @bl, 0.25);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffee5f5b', endColorstr='#ffbd362f', GradientType=0);
   filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
 }
@@ -382,6 +374,18 @@ a {
 .btn-cancel a:hover,
 .btn-cancel a:visited {
 	color: @wht;
-	text-shadow: 0 -1px 0 rgba(@rbck, 0.25);
+	text-shadow: 0 -1px 0 rgba(@bl, @bl, @bl, 0.25);
 	background-color: transparent;
 }
+/*
+.centered-gradient(@outer: @pastel_xdark, @inner: @pastel_medium) {
+  background: @outer;
+  background: -moz-linear-gradient(left,  @outer 0%, @inner 50%, @outer 100%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,@outer), color-stop(50%,@inner), color-stop(100%,@outer));
+  background: -webkit-linear-gradient(left,  @outer 0%,@inner 50%,@outer 100%);
+  background: -o-linear-gradient(left,  @outer 0%,@inner 50%,@outer 100%);
+  background: -ms-linear-gradient(left,  @outer 0%,@inner 50%,@outer 100%);
+  background: linear-gradient(to right,  @outer 0%,@inner 50%,@outer 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@outer', endColorstr='@outer',GradientType=1 );
+}
+*/
